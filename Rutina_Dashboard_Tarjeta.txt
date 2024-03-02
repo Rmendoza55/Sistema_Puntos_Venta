@@ -1,3 +1,5 @@
+PROCEDIMIENTO QUE SE ENCARGAR DE MOSTRAR LOS DATOS SOLICITADOS EN LAS TARJETAS DEL DASHBOARD
+
 BEGIN
 
 DECLARE totalProductos int;
@@ -15,11 +17,11 @@ SET ganancias = (SELECT SUM(vd.total_venta) - SUM(p.precio_compra_producto * vd.
 SET productosPocoStock = (SELECT COUNT(1) FROM productos P WHERE P.stock_producto <= p.minimo_stock_producto);
 SET ventasHoy = (SELECT SUM(vc.total_venta) FROM venta_cabecera vc WHERE vc.fecha_venta = CURRENT_DATE());
 
-SELECT IFNULL(totalProductos,0) AS totalProductos,
-	   IFNULL(ROUND(totalCompras,2),0) AS totalCompras,
-       IFNULL((ROUND(totalVentas,2),0) AS totalVentas,
-       IFNULL((ROUND(ganancias,2),0) AS ganancias,
-       IFNULL(productosPocoStock,0) AS productosPocoStock,
-       IFNULL((ROUND(ventasHoy,2),0) AS ventasHoy;
+SELECT IFNULL(totalProductos, 0) AS totalProductos,
+	IFNULL(ROUND(totalCompras, 2), 0) AS totalCompras,
+       IFNULL(ROUND(totalVentas, 2) ,0) AS totalVentas,
+       IFNULL(ROUND(ganancias, 2), 0) AS ganancias,
+       IFNULL(productosPocoStock, 0) AS productosPocoStock,
+       IFNULL(ROUND(ventasHoy, 2), 0) AS ventasHoy;
        
 END

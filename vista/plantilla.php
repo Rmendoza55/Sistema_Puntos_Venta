@@ -26,6 +26,8 @@
     <script src="vista/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- AdminLTE App -->
     <script src="vista/assets/dist/js/adminlte.min.js"></script>
+    <!--  Charts JS -->
+    <script src="vista/assets/plugins/char.js/Chart.min.js"></script>
 
 </head>
 

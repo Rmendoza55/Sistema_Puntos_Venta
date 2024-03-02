@@ -32,6 +32,6 @@
      </ul>
 
      <!-- Right navbar links -->
-     
+
  </nav>
  <!-- /.navbar -->
